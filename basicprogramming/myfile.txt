@@ -1,0 +1,3 @@
+This is New DelhiThis is New Delhi
+Today is Friday and tomorrow will be Saturday.
+We are experising Java
