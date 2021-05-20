@@ -1,0 +1,66 @@
+import java.util.*;
+public class Calculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int num1, num2, sign;
+		Scanner sc = new Scanner(System.in);
+		
+		do {
+			System.out.println("Enter the first number :");
+			num1 = sc.nextInt();
+			
+			System.out.println("Enter the second number :");
+			num2 = sc.nextInt();
+		
+			System.out.println("Enter number beside the operation to perform: :");
+			System.out.println("1. Add");
+			System.out.println("2. Subtract");
+			System.out.println("3. Multiply");
+			System.out.println("4. Divide");
+			sign = sc.nextInt();
+			
+			
+			calculate(num1, num2, sign);
+			
+			System.out.println("Do you want to try again(y/n) :");
+			char Var = sc.next().charAt(0);
+			
+			if(Var == 'n') {
+				System.out.println("Thank You.");
+				break;
+			}
+			
+		}
+		while(true);
+			
+		sc.close();
+	}
+
+
+
+	public static void calculate(int a, int b, int sign) {
+		
+		switch (sign) {
+		
+		case 1:
+			System.out.println(a + " + " + b + " = " + (a+b));
+			break;
+		case 2:
+			System.out.println(a + " - " + b + " = " + (a-b));
+			break;
+		case 3:
+			System.out.println(a + " * " + b + " = " + (a*b));
+			break;
+		case 4:
+			System.out.println(a + " / " + b + " = " + (a/b));
+			break;
+		
+		default :
+			System.out.println("INVALID OPERATION");
+		
+		}
+	
+	}
+}
