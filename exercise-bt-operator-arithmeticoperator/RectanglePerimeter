@@ -1,0 +1,33 @@
+import java.util.*;
+public class RectanglePerimeter {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		getValues();
+		
+	}
+	
+	public static void getValues() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		double length, breadth, perimeter;
+		System.out.println("Enter Length & Breadth of the rectangle respectively :");
+	
+		length = sc.nextDouble();
+		breadth = sc.nextDouble();
+		
+		perimeter = perimeterCalculator(length, breadth);
+		
+		System.out.println("Expected Output : " +  perimeter);
+		
+		sc.close();
+	}
+	
+	public static double perimeterCalculator(double length, double breadth) {
+		
+		return (2 * (length + breadth));
+	}
+
+}

@@ -1,0 +1,53 @@
+import java.util.*;
+public class PhoneNumberValidator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			
+		String phoneNumber;
+		phoneNumber = getInput();
+		
+		displayResult(phoneNumber);
+	}
+	
+	public static String getInput() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Phone Number : ");
+		String tempVar = sc.nextLine();
+		
+		sc.close();
+		
+		return tempVar;
+		
+	}
+	
+	public static void displayResult(String str) {
+		
+		int numLen = str.length();
+		int count = 0;
+		
+		for(int i=0; i<numLen; i++) {
+			
+			if(str.charAt(i) == '-') {
+				continue;
+			}
+			
+			int a = str.charAt(i); 
+			if(a>=48 && a<=57) {
+				count++;
+			}
+			else {
+				break;
+			}
+		}
+		
+		if(count == 10) {
+			System.out.println("Valid");
+		}
+		else {
+			System.out.println("Invalid or empty string");
+		}
+	}
+
+}
